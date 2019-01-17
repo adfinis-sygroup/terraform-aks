@@ -69,6 +69,6 @@ resource "azurerm_kubernetes_cluster" "default" {
 }
 
 resource "local_file" "kubeconfig" {
-  filename = "./kubeconfig"
+  filename = "./meetup.kubeconfig"
   content  = "${azurerm_kubernetes_cluster.default.kube_config_raw}"
 }
