@@ -1,4 +1,4 @@
-output "address" {
-  value       = "${azurerm_kubernetes_cluster.default.fqdn}"
+output "kubernetes" {
+  value       = "${azurerm_kubernetes_cluster}"
   description = "FQDN of kubernetes"
 }

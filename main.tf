@@ -67,8 +67,3 @@ resource "azurerm_kubernetes_cluster" "default" {
     owner    = "${var.tags["owner"]}"
   }
 }
-
-resource "local_file" "kubeconfig" {
-  filename = "./meetup.kubeconfig"
-  content  = "${azurerm_kubernetes_cluster.default.kube_config_raw}"
-}
